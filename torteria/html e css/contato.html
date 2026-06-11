@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Contato — Torteria do Massa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <header>
+      <nav>
+        <a class="logo" href="home.html">
+          <img src="img/logo.png" alt="Torteria do Massa" class="logo-img" width="52" height="52" />
+          Torteria do Massa
+        </a>
+        <ul class="nav-list">
+          <li><a href="home.html">Início</a></li>
+          <li><a href="about.html">História</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-tail">
+          <button type="button" class="nav-cart" data-open-cart aria-label="Abrir carrinho de compras">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            <span class="nav-cart__count" data-cart-count>0</span>
+          </button>
+          <div class="mobile-menu" aria-label="Abrir menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart-backdrop" data-cart-backdrop></div>
+    <aside class="cart-panel" data-cart-panel aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+      <div class="cart-panel__head">
+        <h2 id="cartTitle">Carrinho</h2>
+        <button type="button" class="cart-panel__close" data-close-cart aria-label="Fechar carrinho">×</button>
+      </div>
+      <div class="cart-panel__body">
+        <p class="cart-panel__empty" data-cart-empty>Seu carrinho está vazio. Que tal uma tortinha?</p>
+        <div data-cart-list></div>
+      </div>
+      <footer class="cart-panel__foot">
+        <span>Total (demo)</span>
+        <strong>R$ <span data-cart-total>0,00</span></strong>
+        <p class="cart-demo-note">Demonstração: os pedidos são finalizados pelo Instagram ou na loja.</p>
+      </footer>
+    </aside>
+
+    <main>
+      <section class="contact">
+        <h2>Fale conosco</h2>
+        <p class="section-sub">Encomendas, dúvidas ou um “oi” também vale — respondemos com carinho.</p>
+        <div class="contact-container">
+          <div class="form-container">
+            <form action="enviar_mensagem.php" method="post">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Como podemos te chamar?" required />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Conta pra gente: data da festa, sabores preferidos..." required></textarea>
+              </div>
+              <button type="submit" class="submit-button">Enviar mensagem</button>
+            </form>
+          </div>
+
+          <div class="location-container">
+            <h3>Onde estamos</h3>
+            <iframe
+              title="Mapa da Torteria do Massa"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.652579367749!2d-48.5178824!3d-25.5166308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94db9b0061aa6ac9%3A0x43132362884891cd!2sTorteria%20do%20Massa!5e0!3m2!1spt-BR!2sbr!4v1778636752762!5m2!1spt-BR!2sbr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Torteria do Massa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="mobile-navbar.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

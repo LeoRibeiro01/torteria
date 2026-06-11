@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>História — Torteria do Massa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="story-page">
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <header>
+      <nav>
+        <a class="logo" href="home.html">
+          <img src="img/logo.png" alt="Torteria do Massa" class="logo-img" width="52" height="52" />
+          Torteria do Massa
+        </a>
+        <ul class="nav-list">
+          <li><a href="home.html">Início</a></li>
+          <li><a href="about.html">História</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-tail">
+          <button type="button" class="nav-cart" data-open-cart aria-label="Abrir carrinho de compras">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            <span class="nav-cart__count" data-cart-count>0</span>
+          </button>
+          <div class="mobile-menu" aria-label="Abrir menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart-backdrop" data-cart-backdrop></div>
+    <aside class="cart-panel" data-cart-panel aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+      <div class="cart-panel__head">
+        <h2 id="cartTitle">Carrinho</h2>
+        <button type="button" class="cart-panel__close" data-close-cart aria-label="Fechar carrinho">×</button>
+      </div>
+      <div class="cart-panel__body">
+        <p class="cart-panel__empty" data-cart-empty>Seu carrinho está vazio. Que tal uma tortinha?</p>
+        <div data-cart-list></div>
+      </div>
+      <footer class="cart-panel__foot">
+        <span>Total (demo)</span>
+        <strong>R$ <span data-cart-total>0,00</span></strong>
+        <p class="cart-demo-note">Demonstração: os pedidos são finalizados pelo Instagram ou na loja.</p>
+      </footer>
+    </aside>
+
+    <main>
+      <section class="story-hero">
+        <div>
+          <h1>Uma história que começou num caderno esquecido na gaveta</h1>
+          <p>Rola a página e acompanhe os ingredientes dessa trajetória, com um pouco de farinha, coragem e muito amor.</p>
+        </div>
+        <p class="story-scroll-hint" aria-hidden="true">Role para baixo</p>
+      </section>
+
+      <div class="story-track">
+        <section class="story-chapter" data-story-chapter>
+          <div class="story-chapter__inner">
+            <div class="story-text-block" data-story-text>
+              <p>
+                Há anos, o pai da família seguia a rotina de um emprego que pagava as contas, mas não acendia a chama por dentro. Entre uma demanda e outra, faltava tempo para o que realmente importava:
+                <strong>estar perto de quem ama</strong> e cozinhar sem pressa.
+              </p>
+            </div>
+            <div class="story-visual story-visual--logo" data-story-visual>
+              <img
+                src="img/logo.png"
+                alt="Logotipo da Torteria do Massa"
+                class="story-brand-logo"
+                data-parallax="logo"
+                width="280"
+                height="280"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="story-chapter" data-story-chapter>
+          <div class="story-chapter__inner">
+            <div class="story-text-block" data-story-text>
+              <p>
+                Ao deixar aquele caminho, ele arrumou a casa, e foi aí que o destino brincou com ele: entre papéis antigos, apareceu um
+                <strong>caderno de receitas</strong> rabiscado por ele mesmo, há mais de dez anos. Páginas amareladas, cheiro de memória e ideias que nunca tinham tido vez de brilhar.
+              </p>
+            </div>
+            <div class="story-visual story-visual--photo" data-story-visual>
+              <figure class="story-photo story-photo--book" data-parallax="photo-book">
+                <span class="story-photo__glow" aria-hidden="true"></span>
+                <div class="story-photo__frame">
+                  <img
+                    src="img/fatiabonita.jpeg"
+                    alt="Fatia de torta artesanal — inspiração do caderno de receitas"
+                    class="story-photo__img"
+                    loading="lazy"
+                    width="640"
+                    height="480"
+                  />
+                </div>
+                <figcaption class="story-photo__caption">Do caderno à mesa</figcaption>
+              </figure>
+              <div class="deco-flour" data-parallax="flour-a" style="left: 8%; top: 18%"></div>
+              <div class="deco-flour deco-flour--2" data-parallax="flour-b" style="right: 4%; bottom: 12%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="story-chapter" data-story-chapter>
+          <div class="story-chapter__inner">
+            <div class="story-text-block" data-story-text>
+              <p>
+                Em vez de guardar de novo, ele decidiu <strong>aperfeiçoar cada receita</strong>: testar massas, ajustar recheios, ouvir crítica da família na hora do café e rir quando o forno quase não aguentava tantos experimentos.
+              </p>
+            </div>
+            <div class="story-visual story-visual--photo" data-story-visual>
+              <figure class="story-photo story-photo--chocolate" data-parallax="photo-chocolate">
+                <span class="story-photo__glow" aria-hidden="true"></span>
+                <div class="story-photo__frame">
+                  <img
+                    src="img/chocolate.jpeg"
+                    alt="Torta de chocolate sendo aperfeiçoada na cozinha"
+                    class="story-photo__img"
+                    loading="lazy"
+                    width="640"
+                    height="480"
+                  />
+                </div>
+                <figcaption class="story-photo__caption">Receita em evolução</figcaption>
+              </figure>
+              <div class="deco-flour" data-parallax="flour-c" style="right: 14%; top: 6%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="story-chapter story-chapter--light" data-story-chapter>
+          <div class="story-chapter__inner">
+            <div class="story-text-block" data-story-text>
+              <p>
+                As primeiras tortas saíram para vizinhos e amigos. A notícia se espalhou, e o que era um gesto de carinho virou fila na porta. O sucesso na cidade foi
+                <strong>estrondoso</strong>: encomendas, indicações, sorrisos de volta e a certeza de que aquele caderno sempre tinha sido o mapa do caminho certo.
+              </p>
+              <p>
+                Hoje a Torteria do Massa cresce a cada dia, ainda com a alma de cozinha de casa, só que agora com uma mesa maior para dividir com você.
+              </p>
+            </div>
+            <div class="story-visual story-visual--photo story-visual--fachada" data-story-visual>
+              <figure class="story-photo story-photo--fachada" data-parallax="photo-fachada">
+                <span class="story-photo__glow" aria-hidden="true"></span>
+                <div class="story-photo__frame">
+                  <img
+                    src="img/fachada.jpeg"
+                    alt="Fachada da Torteria do Massa — fila de clientes e carinho na porta"
+                    class="story-photo__img"
+                    loading="lazy"
+                    width="640"
+                    height="480"
+                  />
+                </div>
+                <figcaption class="story-photo__caption">Nossa casa, sua mesa</figcaption>
+              </figure>
+              <div class="deco-flour" data-parallax="flour-d" style="left: 6%; bottom: 8%"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="story-outro">
+        <h2>Obrigado por fazer parte dessa história</h2>
+        <p>Cada pedido ajuda uma família a continuar escrevendo novas páginas, agora com cheirinho de torta fresca.</p>
+        <a class="btn btn--wine" href="produtos.html">Ver produtos</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Torteria do Massa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="mobile-navbar.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      (function () {
+        if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+        gsap.registerPlugin(ScrollTrigger);
+
+        var reduce =
+          window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce) return;
+
+        gsap.utils.toArray("[data-story-chapter]").forEach(function (chapter) {
+          var visual = chapter.querySelector("[data-story-visual]");
+          var text = chapter.querySelector("[data-story-text]");
+          if (text) {
+            gsap.fromTo(
+              text,
+              { opacity: 0, y: 52 },
+              {
+                opacity: 1,
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: chapter,
+                  start: "top 82%",
+                  end: "top 48%",
+                  scrub: 0.65,
+                },
+              }
+            );
+          }
+          if (!visual) return;
+
+          var photo = visual.querySelector(".story-photo");
+          var nodes = visual.querySelectorAll("[data-parallax]");
+          nodes.forEach(function (node, i) {
+            var isPhoto = node.classList.contains("story-photo");
+            var depth = isPhoto ? 0.55 : 0.35 + (i % 3) * 0.25;
+            var rotIn = isPhoto ? -3 : i % 2 === 0 ? -6 : 6;
+            var rotOut = isPhoto ? 2 : i % 2 === 0 ? 4 : -4;
+            gsap.fromTo(
+              node,
+              { y: 90 * depth, rotation: rotIn, scale: isPhoto ? 0.88 : 0.92 },
+              {
+                y: -70 * depth,
+                rotation: rotOut,
+                scale: 1,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: chapter,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 1.1,
+                },
+              }
+            );
+          });
+
+          if (photo) {
+            var img = photo.querySelector(".story-photo__img");
+            if (img) {
+              gsap.fromTo(
+                img,
+                { scale: 1.12 },
+                {
+                  scale: 1,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: chapter,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1.4,
+                  },
+                }
+              );
+            }
+            gsap.fromTo(
+              photo,
+              { opacity: 0.35 },
+              {
+                opacity: 1,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: chapter,
+                  start: "top 88%",
+                  end: "top 52%",
+                  scrub: 0.5,
+                },
+              }
+            );
+          }
+
+          gsap.to(visual, {
+            y: -30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: chapter,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.6,
+            },
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

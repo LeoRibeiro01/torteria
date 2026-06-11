@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torteria do Massa — Tortas artesanais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <header>
+      <nav>
+        <a class="logo" href="home.html">
+          <img src="img/logo.png" alt="Torteria do Massa" class="logo-img" width="52" height="52" />
+          Torteria do Massa
+        </a>
+        <ul class="nav-list">
+          <li><a href="home.html">Início</a></li>
+          <li><a href="about.html">História</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-tail">
+          <button type="button" class="nav-cart" data-open-cart aria-label="Abrir carrinho de compras">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            <span class="nav-cart__count" data-cart-count>0</span>
+          </button>
+          <div class="mobile-menu" aria-label="Abrir menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart-backdrop" data-cart-backdrop></div>
+    <aside class="cart-panel" data-cart-panel aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+      <div class="cart-panel__head">
+        <h2 id="cartTitle">Carrinho</h2>
+        <button type="button" class="cart-panel__close" data-close-cart aria-label="Fechar carrinho">×</button>
+      </div>
+      <div class="cart-panel__body">
+        <p class="cart-panel__empty" data-cart-empty>Seu carrinho está vazio. Que tal uma tortinha?</p>
+        <div data-cart-list></div>
+      </div>
+      <footer class="cart-panel__foot">
+        <span>Total (demo)</span>
+        <strong>R$ <span data-cart-total>0,00</span></strong>
+        <p class="cart-demo-note">Demonstração: os pedidos são finalizados pelo Instagram ou na loja.</p>
+      </footer>
+    </aside>
+
+    <main class="page-main">
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="hero__badge">Desde a cozinha de casa até a sua mesa</p>
+          <h1>Tortas de forno que aquecem o coração</h1>
+          <p class="hero__lead">
+            Receitas de família, massas leves e recheios generosos. Peça para o café da tarde, para a ceia ou só porque
+            você merece um pedacinho de carinho.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="produtos.html">Ver tortas e salgados</a>
+            <a class="btn btn--ghost" href="about.html">Conheça nossa história</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" aria-labelledby="destaques-title">
+        <h2 id="destaques-title" class="section-title">Destaques da vitrine</h2>
+        <p class="section-sub">Os sabores que mais fazem sucesso por aqui — sempre fresquinhos.</p>
+        <div class="featured__grid">
+          <article class="feature-card reveal">
+            <img src="img/empadao.JPG" alt="Empadão de frango crocante" width="400" height="300" loading="lazy" />
+            <div class="feature-card__body">
+              <h3>Empadão de frango</h3>
+              <p>Massa amanteigada, recheio cremoso e aquele topo dourado que derrete na boca.</p>
+              <a class="feature-card__link" href="produtos.html">Ver na loja <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <img src="img/prestigio.JPG" alt="Torta prestígio" width="400" height="300" loading="lazy" />
+            <div class="feature-card__body">
+              <h3>Torta Prestígio</h3>
+              <p>Coco, chocolate e muito carinho — o clássico que some em minutos na mesa.</p>
+              <a class="feature-card__link" href="produtos.html">Ver na loja <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <img src="img/ricota.JPG" alt="Torta de ricota" width="400" height="300" loading="lazy" />
+            <div class="feature-card__body">
+              <h3>Torta de ricota</h3>
+              <p>Leve, fofinha e na medida certa de doçura — perfeita com um cafezinho.</p>
+              <a class="feature-card__link" href="produtos.html">Ver na loja <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-band">
+        <h2>Vem nos visitar</h2>
+        <p>Encomendas, retirada na loja e novidades do dia nas redes. Manda um oi que a gente te conta o que saiu do forno.</p>
+        <a class="btn btn--primary" href="contato.html">Fale conosco</a>
+      </section>
+
+      <section class="social-media">
+        <h2>Siga a Torteria nas redes</h2>
+        <p>Fotos do forno, bastidores da família e tortas quentinhas saindo.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/p/Torteria-do-Massa-61579276713405/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/torteriadomassa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Torteria do Massa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="mobile-navbar.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) en.target.classList.add("is-visible");
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        obs.observe(el);
+      });
+    </script>
+  </body>
+</html>

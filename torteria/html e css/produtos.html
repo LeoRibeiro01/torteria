@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos — Torteria do Massa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <header>
+      <nav>
+        <a class="logo" href="home.html">
+          <img src="img/logo.png" alt="Torteria do Massa" class="logo-img" width="52" height="52" />
+          Torteria do Massa
+        </a>
+        <ul class="nav-list">
+          <li><a href="home.html">Início</a></li>
+          <li><a href="about.html">História</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-tail">
+          <button type="button" class="nav-cart" data-open-cart aria-label="Abrir carrinho de compras">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            <span class="nav-cart__count" data-cart-count>0</span>
+          </button>
+          <div class="mobile-menu" aria-label="Abrir menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart-backdrop" data-cart-backdrop></div>
+    <aside class="cart-panel" data-cart-panel aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+      <div class="cart-panel__head">
+        <h2 id="cartTitle">Carrinho</h2>
+        <button type="button" class="cart-panel__close" data-close-cart aria-label="Fechar carrinho">×</button>
+      </div>
+      <div class="cart-panel__body">
+        <p class="cart-panel__empty" data-cart-empty>Seu carrinho está vazio. Que tal uma tortinha?</p>
+        <div data-cart-list></div>
+      </div>
+      <footer class="cart-panel__foot">
+        <span>Total (demo)</span>
+        <strong>R$ <span data-cart-total>0,00</span></strong>
+        <p class="cart-demo-note">Demonstração: os pedidos são finalizados pelo WhatsApp ou na loja.</p>
+        <a class="cart-panel__checkout" data-whatsapp-order href="#" target="_blank" rel="noopener noreferrer">Enviar pedido pelo WhatsApp</a>
+      </footer>
+    </aside>
+
+    <main class="products-wrap">
+      <section class="products">
+        <h2>As delícias da Torteria do Massa</h2>
+        <p class="section-sub">Tortas e empadões feitos com ingredientes selecionados. Toque em “Adicionar ao carrinho” para montar seu pedido de demonstração.</p>
+
+        <div class="product-cards">
+          <article class="product-card">
+            <img src="img/empadao.JPG" alt="Torta de frango com catupiry" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Torta de frango com catupiry</h3>
+              <p>Recheio cremoso de frango desfiado, milho verde e catupiry — conforto em cada fatia.</p>
+              <p class="product-price" data-price="40.0">R$ 40,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="torta-frango"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/empadao.JPG" alt="Empadão de frango" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Empadão de frango</h3>
+              <p>Clássico de festa em casa: massa crocante, recheio suculento e aroma de forno.</p>
+              <p class="product-price" data-price="38.0">R$ 38,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="empadao-frango"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/ricota.JPG" alt="Torta de ricota" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Torta de ricota</h3>
+              <p>Ricota fresca, leve toque de limão e cobertura delicada — ideal para o café.</p>
+              <p class="product-price" data-price="35.00">R$ 35,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="torta-ricota"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="product-cards">
+          <article class="product-card">
+            <img src="img/limao.JPG" alt="Torta de limão com merengue" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Torta de limão com merengue</h3>
+              <p>Cremoso, azedinho na medida e topo de merengue dourado — refrescante e elegante.</p>
+              <p class="product-price" data-price="32.0">R$ 32,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="torta-limao"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/prestigio.JPG" alt="Torta Prestígio" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Torta Prestígio</h3>
+              <p>Coco, chocolate e camadas generosas — a preferida da garotada (e dos adultos também).</p>
+              <p class="product-price" data-price="35.00">R$ 35,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="torta-prestigio"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/creme.JPG" alt="Torta de banana com creme" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Torta de banana com creme</h3>
+              <p>Banana caramelizada, creme veludo e massa que desmancha — nostalgia boa demais.</p>
+              <p class="product-price" data-price="32.0">R$ 32,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="torta-banana-creme"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="product-cards">
+          <article class="product-card">
+            <img src="img/tradicional.JPG" alt="Torta de banana tradicional" class="product-img" loading="lazy" />
+            <div class="product-info">
+              <h3>Torta de banana tradicional</h3>
+              <p>A versão que lembra a casa da vó: simples, honesta e irresistível.</p>
+              <p class="product-price" data-price="28.0">R$ 28,00</p>
+              <button type="button" class="add-to-cart-btn" data-add-cart="torta-banana-trad"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Torteria do Massa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="mobile-navbar.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

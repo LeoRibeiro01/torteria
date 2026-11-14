@@ -39,7 +39,7 @@
       (item.desc ? "<p>" + esc(item.desc) + "</p>" : "") +
       (item.medida ? '<p class="product-measure">' + esc(item.medida) + "</p>" : "") +
       '<p class="product-price" data-price="' + item.preco + '">R$ ' + money(item.preco) + "</p>" +
-      '<button type="button" class="add-to-cart-btn" data-add-cart="p' + esc(item.id) + '"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>' +
+      '<button type="button" class="add-to-cart-btn" data-add-cart="p' + esc(item.id) + '"><i class="fas fa-plus"></i> Adicionar<span class="hide-sm"> ao carrinho</span></button>' +
       "</div></article>"
     );
   }

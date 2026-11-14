@@ -67,7 +67,7 @@
         <p class="section-sub">Nosso email: torteriadomassa@gmail.com </p>
         <div class="contact-container">
           <div class="form-container">
-            <form action="enviar_mensagem.php" method="post">
+            <form data-contact-whatsapp>
               <div class="form-group">
                 <label for="name">Nome</label>
                 <input type="text" id="name" name="name" placeholder="Como podemos te chamar?" required />
@@ -107,5 +107,30 @@
 
     <script src="mobile-navbar.js"></script>
     <script src="cart.js"></script>
+    <script>
+      /* Envia a mensagem do formulário para o WhatsApp da Torteria */
+      (function () {
+        const form = document.querySelector("[data-contact-whatsapp]");
+        if (!form) return;
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nome = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const mensagem = document.getElementById("message").value.trim();
+          const texto = [
+            "Olá, Torteria do Massa! Vim pelo site.",
+            "",
+            "Nome: " + nome,
+            "E-mail: " + email,
+            "",
+            "Mensagem:",
+            mensagem
+          ].join("\n");
+          const url = "https://api.whatsapp.com/send?phone=5541984663572&text=" + encodeURIComponent(texto);
+          window.open(url, "_blank", "noopener");
+          form.reset();
+        });
+      })();
+    </script>
   </body>
 </html>

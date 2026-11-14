@@ -65,83 +65,18 @@
     <main class="products-wrap">
       <section class="products">
         <h2>As delícias da Torteria do Massa</h2>
-        <p class="section-sub">Tortas e empadões feitos com ingredientes selecionados. Toque em “Adicionar ao carrinho” para montar seu pedido de demonstração.</p>
+        <p class="section-sub">Conheça todos os nossos sabores! A disponibilidade muda a cada dia: monte seu pedido e confirme pelo WhatsApp quais sabores temos hoje.</p>
 
-        <div class="product-cards">
-          <article class="product-card">
-            <img src="img/empadao.JPG" alt="Torta de frango com catupiry" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Torta de frango com catupiry</h3>
-              <p>Recheio cremoso de frango desfiado, milho verde e catupiry — conforto em cada fatia.</p>
-              <p class="product-price" data-price="40.0">R$ 40,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="torta-frango"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="img/empadao.JPG" alt="Empadão de frango" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Empadão de frango</h3>
-              <p>Clássico de festa em casa: massa crocante, recheio suculento e aroma de forno.</p>
-              <p class="product-price" data-price="38.0">R$ 38,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="empadao-frango"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="img/ricota.JPG" alt="Torta de ricota" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Torta de ricota</h3>
-              <p>Ricota fresca, leve toque de limão e cobertura delicada — ideal para o café.</p>
-              <p class="product-price" data-price="35.00">R$ 35,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="torta-ricota"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
+        <div class="menu-tools">
+          <label class="menu-search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input type="search" placeholder="Buscar sabor (ex.: limão, nutella, frango)" data-cardapio-search aria-label="Buscar sabor" />
+          </label>
+          <div class="menu-chips" data-cardapio-chips></div>
         </div>
 
-        <div class="product-cards">
-          <article class="product-card">
-            <img src="img/limao.JPG" alt="Torta de limão com merengue" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Torta de limão com merengue</h3>
-              <p>Cremoso, azedinho na medida e topo de merengue dourado — refrescante e elegante.</p>
-              <p class="product-price" data-price="32.0">R$ 32,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="torta-limao"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="img/prestigio.JPG" alt="Torta Prestígio" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Torta Prestígio</h3>
-              <p>Coco, chocolate e camadas generosas — a preferida da garotada (e dos adultos também).</p>
-              <p class="product-price" data-price="35.00">R$ 35,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="torta-prestigio"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="img/creme.JPG" alt="Torta de banana com creme" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Torta de banana com creme</h3>
-              <p>Banana caramelizada, creme veludo e massa que desmancha — nostalgia boa demais.</p>
-              <p class="product-price" data-price="32.0">R$ 32,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="torta-banana-creme"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
-        </div>
-
-        <div class="product-cards">
-          <article class="product-card">
-            <img src="img/tradicional.JPG" alt="Torta de banana tradicional" class="product-img" loading="lazy" />
-            <div class="product-info">
-              <h3>Torta de banana tradicional</h3>
-              <p>A versão que lembra a casa da vó: simples, honesta e irresistível.</p>
-              <p class="product-price" data-price="28.0">R$ 28,00</p>
-              <button type="button" class="add-to-cart-btn" data-add-cart="torta-banana-trad"><i class="fas fa-plus"></i> Adicionar ao carrinho</button>
-            </div>
-          </article>
-        </div>
+        <div data-cardapio></div>
+        <p class="menu-empty" data-cardapio-empty hidden>Nenhum sabor encontrado. Tente outra palavra!</p>
       </section>
     </main>
 
@@ -150,6 +85,8 @@
     </footer>
 
     <script src="mobile-navbar.js"></script>
+    <script src="cardapio-data.js"></script>
+    <script src="cardapio.js"></script>
     <script src="cart.js"></script>
   </body>
 </html>
